@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number!</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div
+      id="back-icon"
+      class="absolute rounded-full mt-20 ml-32"
+      onclick="location.href='index.html'"
+    >
+      <i class="fas fa-chevron-left fa-lg"></i>
+    </div>
+    <div class="flex pt-40 justify-center h-screen w-screen">
+      <div class="text-center">
+        <h1 class="ml3">how to play</h1>
+        <section
+          class="banner font-bold text-2xl"
+          style="font-family: 'Roboto', sans-serif"
+        >
+          <p class="fade-in delayed">
+            The computer will think of a number randomly in the range of 1 to
+            100
+          </p>
+          <p class="fade-in delayed">
+            You have 7 chances to guess the correct number!
+          </p>
+          <p class="fade-in delayed">
+            If you get it right within 7 chances, you win 👊🏽🏆
+          </p>
+          <p class="fade-in delayed">
+            If you aren't able to guess it correctly in 7 chances, bruhh you
+            lose 🤨
+          </p>
+        </section>
+      </div>
+    </div>
+  </body>
+  <script src="https://use.fontawesome.com/3eba7468c2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="./script.js"></script>
+</html>
