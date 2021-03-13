@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess The Number!</title>
     <link href="./styles.css" rel="stylesheet" />
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-</head>
-<body id="body" onclick="start()">
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script defer src="/node_modules/js/brands.js"></script>
+    <script defer src="/node_modules/js/solid.js"></script>
+    <script defer src="/node_modules/js/fontawesome.js"></script>
+  </head>
+  <body id="body" onclick="start()">
     <div class="absolute right-0 mr-10 mt-10">
-        <ul class="list-inline social-links flex flex-col">
-          <li><a href="./game-info.html" class="btn-social btn-outline flex items-center justify-center" data-toggle="tooltip" data-placement="top" title="Github"><i class="fas fa-info fa-md"></i></a>
-          </li>
-          <li><a href="./credits.html" class="btn-social btn-outline flex items-center justify-center" data-toggle="tooltip" data-placement="top" title="Github"><i class="fas fa-heart fa-md"></i></a>
-          </li>
-        </ul>
-      </div>
-    <div class="flex items-center justify-center h-screen flex-col">
-    <p id="heading" class="text-6xl" style="font-family: 'Fredoka One', cursive;">Guess the number?!</p>
-    <p id="ques" class="text-2xl" style="font-family: 'Fredoka One', cursive;">click anywhere on the screen to start.</p>
+      <ul class="list-inline social-links flex flex-col">
+        <li>
+          <a
+            href="./game-info.html"
+            class="btn-social btn-outline flex items-center justify-center"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Github"
+            ><i class="fas fa-info fa-md"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="./credits.html"
+            class="btn-social btn-outline flex items-center justify-center"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Github"
+            ><i class="fas fa-heart fa-md"></i
+          ></a>
+        </li>
+      </ul>
     </div>
-    
-    <script>
-    </script>
-        <script src="script.js" rel="text/javascript"></script>
+    <div class="flex items-center justify-center h-screen flex-col">
+      <p
+        id="heading"
+        class="text-6xl"
+        style="font-family: 'Fredoka One', cursive"
+      >
+        Guess the number?!
+      </p>
+      <p id="ques" class="text-2xl" style="font-family: 'Fredoka One', cursive">
+        click anywhere on the screen to start.
+      </p>
+    </div>
 
-</body>
+    <script></script>
+    <script src="script.js" rel="text/javascript"></script>
+  </body>
 </html>
