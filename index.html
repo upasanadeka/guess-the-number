@@ -34,44 +34,49 @@
     <script defer src="/node_modules/js/fontawesome.js"></script>
   </head>
   <body id="body" onclick="start()">
-    <div class="absolute right-0 mr-10 mt-10">
-      <ul class="list-inline social-links flex flex-col">
+    <div class="absolute right-0 mr-2 mt-3 sm:mr-5 sm:mt-8 sm:mr-10 sm:mt-10">
+      <ul
+        class="list-inline social-links flex flex-col -space-y-5 sm:space-y-0"
+      >
         <li>
           <a
             href="./game-info.html"
-            class="btn-social btn-outline flex items-center justify-center"
+            class="btn-social btn-outline flex items-center justify-center bg-transparent sm:bg-black"
             data-toggle="tooltip"
             data-placement="top"
-            title="Github"
-            ><i class="fas fa-info fa-md"></i
+            title="Instructions"
+            ><i class="fas fa-info fa-md text-black sm:text-white"></i
           ></a>
         </li>
         <li>
           <a
             href="./credits.html"
-            class="btn-social btn-outline flex items-center justify-center"
+            class="btn-social btn-outline flex items-center justify-center bg-transparent sm:bg-black"
             data-toggle="tooltip"
             data-placement="top"
-            title="Github"
-            ><i class="fas fa-heart fa-md"></i
+            title="Credits"
+            ><i class="fas fa-heart fa-md text-black sm:text-white"></i
           ></a>
         </li>
       </ul>
     </div>
-    <div class="flex items-center justify-center h-screen flex-col">
+    <div class="flex items-center justify-center space-y-4 h-screen flex-col">
       <p
         id="heading"
-        class="text-6xl"
+        class="text-3xl sm:text-6xl"
         style="font-family: 'Fredoka One', cursive"
       >
         Guess the number?!
       </p>
-      <p id="ques" class="text-2xl" style="font-family: 'Fredoka One', cursive">
+      <p
+        id="ques"
+        class="text-base sm:text-2xl italic"
+        style="font-family: 'Fredoka One', cursive"
+      >
         click anywhere on the screen to start.
       </p>
     </div>
 
-    <script></script>
     <script src="script.js" rel="text/javascript"></script>
   </body>
 </html>

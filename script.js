@@ -1,7 +1,10 @@
+//Reload to game page
+
 function start() {
   location.href = "game.html";
 }
 
+//System randomly selects a number from [1, 100]
 var num = Math.floor(Math.random() * 100) + 1;
 var counter = 0;
 function detect_enter_key(event) {
@@ -10,6 +13,8 @@ function detect_enter_key(event) {
     submit();
   }
 }
+
+//Evaluation of answers given by user
 function submit() {
   counter += 1;
   flag = 0;
@@ -22,10 +27,13 @@ function submit() {
 
     if (num > choice) {
       hint = "It is greater than " + choice;
-    } else if (num < choice) {
+    }
+    else if (num < choice) {
       hint = "It is less than " + choice;
     }
-  } else if (num != choice && counter == 7) {
+  } 
+  
+  else if (num != choice && counter == 7) {
     document.getElementById("heading").innerHTML = "GAME OVER!!!";
     document.getElementById("heading2").innerHTML = "";
     quote = "The number was " + num;
@@ -33,18 +41,21 @@ function submit() {
     document.getElementById("ans").type = "hidden";
     document.getElementById("submit").type = "hidden";
     document.getElementById("svg-cat").innerHTML =
-      "<img src='./cat" + ".svg' width='300px' >";
-    // document.getElementById("restart").innerHTML =  "<img src='./redo" +  ".svg' width='100px' >";
+      "<img src='./cat" + ".svg' class='w-40 sm:w-56 mt-6 sm:mt-0' >";
     document.getElementById("restart").innerHTML =
       "<img src='./redo-white" +
       ".svg' >" +
       "<p class='text-lg font-bold text-white'>Play Again</p>";
     flag = 2;
     play();
-  } else if (num != choice && counter > 7) {
+  } 
+  
+  else if (num != choice && counter > 7) {
     // location.reload();
     location.href = "index.html";
-  } else if (num == choice) {
+  }
+  
+  else if (num == choice) {
     quote = "BIG BRAIN ENERGY! 👊🏽";
     document.getElementById("heading").innerHTML = "YASSS!!";
     document.getElementById("heading2").innerHTML = "";
@@ -52,7 +63,6 @@ function submit() {
     document.getElementById("submit").type = "hidden";
     document.getElementById("svg-cat").innerHTML =
       "<img src='./win" + ".gif' width='100px' >";
-    // document.getElementById("restart").innerHTML =  "<img src='./redo" +  ".svg' width='100px' >";
     document.getElementById("restart").innerHTML =
       "<img src='./redo-white" +
       ".svg' >" +
@@ -63,25 +73,21 @@ function submit() {
 
   document.getElementById("ques").innerHTML = quote;
   document.getElementById("hint").innerHTML = hint;
-
-  // if (num != choice && flag == 1){
-
-  // }
-
-  // else if (num == choice && flag == 1){
-
-  // }
 }
+
+//Reload or Replay Game
 function reloadGame() {
   location.href = "index.html";
 }
 
+//Play audio
 function play() {
   if (flag == 1) {
     var audio = document.getElementById("audio-win");
     audio.play();
     audio.volume = 0.4;
-  } else if (flag == 2) {
+  }
+  else if (flag == 2) {
     var audio = document.getElementById("audio-cat");
     audio.play();
   }
@@ -89,7 +95,6 @@ function play() {
 
 //Background color
 
-// var colors = ["#FEC8D8", "#D291BC", "#E0BBE4", "#957DAD", "#93C2C6", "#FFDFD3", "#B1D9CD", "#FBEAC8", "#FAD2A7", "FDB196"];
 var colors = ["yellow", "#32CD32", "cyan"];
 var currentIndex = 0;
 
@@ -101,6 +106,7 @@ setInterval(function () {
   }
 }, 1000);
 
+//Text animations
 var textWrapper = document.querySelector(".ml9 .letters");
 textWrapper.innerHTML = textWrapper.textContent.replace(
   /\S/g,

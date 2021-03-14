@@ -29,40 +29,47 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <script defer src="/node_modules/js/brands.js"></script>
     <script defer src="/node_modules/js/solid.js"></script>
     <script defer src="/node_modules/js/fontawesome.js"></script>
   </head>
-  <body>
+  <body class="overflow-auto">
     <div
       id="back-icon"
-      class="absolute rounded-full mt-20 ml-32"
+      class="absolute rounded-full mt-10 ml-2 sm:mt-20 sm:ml-32"
       onclick="location.href='index.html'"
     >
       <i class="fas fa-chevron-left fa-lg"></i>
     </div>
-    <div class="flex pt-40 justify-center h-screen w-screen">
-      <div class="text-center">
-        <h1 class="ml3">how to play</h1>
+    <div
+      class="flex pt-20 sm:pt-40 justify-center items-start h-screen w-screen"
+    >
+      <div class="text-center space-y-6">
+        <h1 class="ml3-small sm:ml3">how to play</h1>
         <section
-          class="banner font-bold text-2xl"
+          class="banner font-bold text-lg text-justify sm:text-2xl mx-6 ml-8 sm:ml-10 sm:mx-10"
           style="font-family: 'Roboto', sans-serif"
         >
-          <p class="fade-in delayed">
-            The computer will think of a number randomly in the range of 1 to
-            100
-          </p>
-          <p class="fade-in delayed">
-            You have 7 chances to guess the correct number!
-          </p>
-          <p class="fade-in delayed">
-            If you get it right within 7 chances, you win 👊🏽🏆
-          </p>
-          <p class="fade-in delayed">
-            If you aren't able to guess it correctly in 7 chances, bruhh you
-            lose 🤨
-          </p>
+          <ul class="space-y-4">
+            <li type="square" class="fade-in delayed">
+              The computer will think of a number randomly in the range of 1 to
+              100.
+            </li>
+            <li type="square" class="fade-in delayed">
+              You have 7 chances to guess the correct number!
+            </li>
+            <li type="square" class="fade-in delayed">
+              If you get it right within 7 chances, you win 👊🏽🏆
+            </li>
+            <li type="square" class="fade-in delayed">
+              If you aren't able to guess it correctly in 7 chances, bruhh you
+              lose 🤨
+            </li>
+          </ul>
         </section>
       </div>
     </div>

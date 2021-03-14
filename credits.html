@@ -25,27 +25,33 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <script defer src="/node_modules/js/brands.js"></script>
     <script defer src="/node_modules/js/solid.js"></script>
     <script defer src="/node_modules/js/fontawesome.js"></script>
   </head>
-  <body class="">
+  <body class="overflow-auto">
     <div
       id="back-icon"
-      class="absolute rounded-full mt-20 ml-32"
+      class="absolute rounded-full mt-10 ml-2 sm:mt-20 sm:ml-32"
       onclick="location.href='index.html'"
+      alt="back"
     >
       <i class="fas fa-chevron-left fa-lg"></i>
     </div>
-    <div class="flex flex-col justify-center items-center h-screen w-screen">
+    <div
+      class="sm:flex sm:flex-col sm:justify-center sm:items-center h-screen w-screen pt-32 sm:pt-0"
+    >
       <h1 class="ml9">
-        <span class="text-wrapper">
-          <span class="letters">made with love ❤ </span>
+        <span class="text-wrapper text-center">
+          <span class="letters text-2xl">made with love ❤ </span>
         </span>
       </h1>
       <div>
-        <h1 class="ml3">Upasana Deka</h1>
+        <h1 class="ml3 text-center">Upasana Deka</h1>
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
@@ -61,8 +67,6 @@
                     ><i class="fab fa-github"></i
                   ></a>
                 </li>
-                <!-- <li><a href="https://twitter.com/#" target="_blank" class="btn-social btn-outline" title="Twitter"><i class="fab fa-twitter"></i></a>
-                  </li> -->
                 <li>
                   <a
                     href="https://linkedin.com/in/upasana-deka"
