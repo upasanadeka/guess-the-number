@@ -19,15 +19,15 @@ function submit() {
   counter += 1;
   flag = 0;
   var choice = document.getElementById("ans").value;
-  document.getElementById("ans").value = " ";
-  console.log("choice: ", choice, " counter: ", counter, " num: ", num);
+  document.getElementById("ans").value = "";
+  // console.log("choice: ", choice, " counter: ", counter, " num: ", num);
   var hint = "";
   if (num != choice && counter < 7) {
     quote = "Not really... You might wanna try again!";
 
     if (num > choice) {
       hint = "It is greater than " + choice;
-    }
+    } 
     else if (num < choice) {
       hint = "It is less than " + choice;
     }
@@ -70,7 +70,12 @@ function submit() {
     flag = 1;
     play();
   }
-
+  if (counter == 7 || num == choice) {
+    document.getElementById("chances-left").className = "hidden";
+  }
+  else {
+    document.getElementById("chances").innerHTML = 7 - counter;
+  }
   document.getElementById("ques").innerHTML = quote;
   document.getElementById("hint").innerHTML = hint;
 }
