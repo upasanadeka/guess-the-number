@@ -20,10 +20,11 @@
 ### [*You can also contribute to this project by adding fun elements!*](https://github.com/upasanadeka/guess-the-number)
 
 
-## Authoress 👩🏻‍💻
+## Developer 👩🏻‍💻
 
 👩🏻 **Upasana Deka**
 
 * Github: [@upasanadeka](https://github.com/upasanadeka)
+* LinkedIn: [@upasana-deka](https://www.linkedin.com/in/upasana-deka)
 * Youtube: [Upasana Deka](https://youtube.com/upasanadeka)
 * Instagram: [@uppasings](https://instagram.com/uppasings)
