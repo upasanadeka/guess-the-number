@@ -16,12 +16,12 @@ function detect_enter_key(event) {
 
 //Evaluation of answers given by user
 function submit() {
-  counter += 1;
+  var reg = /^\d+$/;
+  if (reg.test(document.getElementById("ans").value)){
+    counter += 1;
   flag = 0;
   var choice = document.getElementById("ans").value;
-  document.getElementById("ans").value = "";
-  // console.log("choice: ", choice, " counter: ", counter, " num: ", num);
-  var hint = "";
+    var hint = "";
   if (num != choice && counter < 7) {
     quote = "Not really... You might wanna try again!";
 
@@ -76,8 +76,13 @@ function submit() {
   else {
     document.getElementById("chances").innerHTML = 7 - counter;
   }
+  
+  document.getElementById("ans").value = "";
   document.getElementById("ques").innerHTML = quote;
   document.getElementById("hint").innerHTML = hint;
+  }
+  // console.log("choice: ", choice, " counter: ", counter, " num: ", num);
+  
 }
 
 //Reload or Replay Game
