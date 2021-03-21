@@ -19,70 +19,69 @@ function submit() {
   var reg = /^\d+$/;
   if (reg.test(document.getElementById("ans").value)){
     counter += 1;
-  flag = 0;
-  var choice = document.getElementById("ans").value;
+    flag = 0;
+    var choice = document.getElementById("ans").value;
     var hint = "";
-  if (num != choice && counter < 7) {
-    quote = "Not really... You might wanna try again!";
+    if (num != choice && counter < 7) {
+      quote = "Not really... You might wanna try again!";
 
-    if (num > choice) {
-      hint = "It is greater than " + choice;
+      if (num > choice) {
+        hint = "It is greater than " + choice;
+      } 
+      else if (num < choice) {
+        hint = "It is less than " + choice;
+      }
     } 
-    else if (num < choice) {
-      hint = "It is less than " + choice;
+    
+    else if (num != choice && counter == 7) {
+      document.getElementById("heading").innerHTML = "GAME OVER!!!";
+      document.getElementById("heading2").innerHTML = "";
+      quote = "The number was " + num;
+      document.getElementById("heading2").type = "hidden";
+      document.getElementById("ans").type = "hidden";
+      document.getElementById("submit").type = "hidden";
+      document.getElementById("svg-cat").innerHTML =
+        "<img src='./assets/cat" + ".svg' class='w-40 sm:w-56 mt-6 sm:mt-0' >";
+      document.getElementById("restart").innerHTML =
+        "<img src='./assets/redo-white" +
+        ".svg' >" +
+        "<p class='text-lg font-bold text-white'>Play Again</p>";
+      flag = 2;
+      play();
+    } 
+    
+    else if (num != choice && counter > 7) {
+      // location.reload();
+      location.href = "index.html";
     }
-  } 
-  
-  else if (num != choice && counter == 7) {
-    document.getElementById("heading").innerHTML = "GAME OVER!!!";
-    document.getElementById("heading2").innerHTML = "";
-    quote = "The number was " + num;
-    document.getElementById("heading2").type = "hidden";
-    document.getElementById("ans").type = "hidden";
-    document.getElementById("submit").type = "hidden";
-    document.getElementById("svg-cat").innerHTML =
-      "<img src='./cat" + ".svg' class='w-40 sm:w-56 mt-6 sm:mt-0' >";
-    document.getElementById("restart").innerHTML =
-      "<img src='./redo-white" +
-      ".svg' >" +
-      "<p class='text-lg font-bold text-white'>Play Again</p>";
-    flag = 2;
-    play();
-  } 
-  
-  else if (num != choice && counter > 7) {
-    // location.reload();
-    location.href = "index.html";
-  }
-  
-  else if (num == choice) {
-    quote = "BIG BRAIN ENERGY! 👊🏽";
-    document.getElementById("heading").innerHTML = "YASSS!!";
-    document.getElementById("heading2").innerHTML = "";
-    document.getElementById("ans").type = "hidden";
-    document.getElementById("submit").type = "hidden";
-    document.getElementById("svg-cat").innerHTML =
-      "<img src='./win" + ".gif' width='100px' >";
-    document.getElementById("restart").innerHTML =
-      "<img src='./redo-white" +
-      ".svg' >" +
-      "<p class='text-lg font-bold text-white'>Play Again</p>";
-    flag = 1;
-    play();
-  }
-  if (counter == 7 || num == choice) {
-    document.getElementById("chances-left").className = "hidden";
-  }
-  else {
-    document.getElementById("chances").innerHTML = 7 - counter;
-  }
-  
-  document.getElementById("ans").value = "";
-  document.getElementById("ques").innerHTML = quote;
-  document.getElementById("hint").innerHTML = hint;
-  }
-  // console.log("choice: ", choice, " counter: ", counter, " num: ", num);
-  
+    
+    else if (num == choice) {
+      quote = "BIG BRAIN ENERGY! 👊🏽";
+      document.getElementById("heading").innerHTML = "YASSS!!";
+      document.getElementById("heading2").innerHTML = "";
+      document.getElementById("ans").type = "hidden";
+      document.getElementById("submit").type = "hidden";
+      document.getElementById("svg-cat").innerHTML =
+        "<img src='./assets/win" + ".gif' width='100px' >";
+      document.getElementById("restart").innerHTML =
+        "<img src='./assets/redo-white" +
+        ".svg' >" +
+        "<p class='text-lg font-bold text-white'>Play Again</p>";
+      flag = 1;
+      play();
+    }
+    if (counter == 7 || num == choice) {
+      document.getElementById("chances-left").className = "hidden";
+    }
+    else {
+      document.getElementById("chances").innerHTML = 7 - counter;
+    }
+    
+    document.getElementById("ans").value = "";
+    document.getElementById("ques").innerHTML = quote;
+    document.getElementById("hint").innerHTML = hint;
+    }
+    // console.log("choice: ", choice, " counter: ", counter, " num: ", num);
 }
 
 //Reload or Replay Game
